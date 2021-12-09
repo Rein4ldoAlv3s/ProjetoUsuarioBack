@@ -1,5 +1,6 @@
 package com.reinaldo.model;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.Objects;
 
@@ -27,14 +28,14 @@ public class Usuario {
 	public Date dataNasc;
 	public String email;
     @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
-	public Date dataCad;
+	public LocalDateTime dataCad;
     
 	public Usuario() {
 		super();
 	}
 
 	public Usuario(Long id, String nomeCompleto, String cpf, String cep, String logradouro, String complemento,
-			Date dataNasc, String email, Date dataCad) {
+			Date dataNasc, String email, LocalDateTime dataCad) {
 		super();
 		this.id = id;
 		this.nomeCompleto = nomeCompleto;
@@ -111,11 +112,11 @@ public class Usuario {
 		this.email = email;
 	}
 
-	public Date getDataCad() {
+	public LocalDateTime getDataCad() {
 		return dataCad;
 	}
 
-	public void setDataCad(Date dataCad) {
+	public void setDataCad(LocalDateTime dataCad) {
 		this.dataCad = dataCad;
 	}
 
